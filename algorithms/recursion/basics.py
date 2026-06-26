@@ -69,8 +69,19 @@ def i_fibb(num):
     ans = [1, 1]
     for i in range(num):
         a, b = ans[-2], ans[-1]
-        a, b = b, a + b
-        ans.append(b)
+        ans.append(a + b)
     return ans
 
 print(i_fibb(5))
+
+## Recursive fibonacci
+def r_fibb(num, ans=[1,1]):
+    if num == 0:
+        return
+    r_fibb(num - 1, ans)
+    a, b = ans[-2], ans[-1]
+    ans.append(a + b)
+
+output = [1, 1]
+r_fibb(5, output)
+print(output)
