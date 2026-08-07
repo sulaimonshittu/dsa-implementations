@@ -85,3 +85,10 @@ def r_fibb(num, ans=[1,1]):
 output = [1, 1]
 r_fibb(5, output)
 print(output)
+
+def fibb(num):
+    if num == 1 or num == 2:
+        return 1
+    return fibb(num - 1) + fibb(num - 2)
+
+print(fibb(10))
